@@ -1,0 +1,61 @@
+# Project 123: Emergency Room Triage
+
+# Integers part
+# numbers of patients in 5 shifts
+shift_patients = [12, 18, 25, 10, 15]
+
+total = sum(shift_patients)
+avg = total / len(shift_patients)
+mn = min(shift_patients)
+mx = max(shift_patients)
+
+print("Patients per shift:", shift_patients)
+print("Total:", total, " Average:", round(avg, 2), " Min:", mn, " Max:", mx)
+
+# Strings
+print("\n--- Report ---")
+report = f"Total patients: {total}\n"
+report += f"Average per shift: {avg:.1f}"
+print(report)
+
+# Booleans
+limit = 16
+if avg > limit and mx > 20:
+    print("Above Standard")
+else:
+    print("Below Standard")
+
+# Lists
+triage_levels = ["Critical", "High", "Medium", "Low"]
+print("\nBefore:", triage_levels)
+
+triage_levels.append("Observation")
+if "Low" in triage_levels:
+    triage_levels.remove("Low")
+triage_levels.sort()
+
+print("After:", triage_levels)
+
+# Arrays
+from array import array
+arr = array('i', shift_patients[:3])
+print("\nArray values:", arr.tolist())
+print("Array sum:", sum(arr))
+
+# Dictionaries
+records = [
+    {"id": 1, "name": "John", "value": 5},
+    {"id": 2, "name": "Mary", "value": 7},
+    {"id": 3, "name": "Paul", "value": 3}
+]
+
+print("\nRecords before:", records)
+
+# update Mary's value
+records[1]["value"] = 9
+# remove Paul
+records = [r for r in records if r["id"] != 3]
+
+total_vals = sum(r["value"] for r in records)
+print("Records now:", records)
+print("Total of values:", total_vals)
