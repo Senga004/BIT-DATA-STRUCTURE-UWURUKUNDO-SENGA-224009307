@@ -58,4 +58,5 @@ records = [r for r in records if r["id"] != 3]
 
 total_vals = sum(r["value"] for r in records)
 print("Records now:", records)
+
 print("Total of values:", total_vals)
