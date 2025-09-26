@@ -60,3 +60,7 @@ total_vals = sum(r["value"] for r in records)
 print("Records now:", records)
 
 print("Total of values:", total_vals)
+
+
+
+"C:\Users\user\Pictures\Screenshots\Screenshot (18).png"
