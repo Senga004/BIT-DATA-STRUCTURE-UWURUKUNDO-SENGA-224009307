@@ -37,3 +37,6 @@ print("Front citizen after 6 served:", queue[0])
 
 queue = deque(range(1, 6))
 print("Second in ATM queue:", queue[1])
+
+
+C:\Users\user\Pictures\Screenshots\Screenshot (20).png
